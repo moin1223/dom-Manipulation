@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Event Niye Click Baji</h1>
+    
+    <button onclick="document.body.style.backgroundColor='orange'">Chang background orang</button>
+    <button onclick=" ChangBackgroundRed()">Chang background red</button>
+    <button id="blue">Chang background blue</button>
+    <button id="green">Chang background green</button>
+    <button id="golden-rod">Chang background golden-rod</button>
+    <button id="hot-pink">Chang background hotpink</button>
+    <button id="light-blue">Chang background lightblue</button>
+
+    <script>
+        // 1
+        function ChangBackgroundRed(){
+            document.body.style.backgroundColor="red"
+        }
+        // 2
+        const blue = document.getElementById("blue")
+        blue.onclick = ChangBackgroundBlue;
+        function ChangBackgroundBlue(){
+            document.body.style.backgroundColor="blue"
+        }
+        //3 handle event using anonymous function
+         
+        const green = document.getElementById("green")
+        green.onclick = function () {
+            document.body.style.backgroundColor="green"
+        }
+        //4 handle by usind event listener
+        
+        const goldenrod = document.getElementById("golden-rod")
+        goldenrod.addEventListener('click',ChangBackgroundBlue)
+        function ChangBackgroundBlue(){
+            document.body.style.backgroundColor="goldenrod"
+        }
+        
+   //5 handle by usind event listener with anonymous function
+   const hotpink = document.getElementById("hot-pink")
+   hotpink.addEventListener('click', function () {
+    document.body.style.backgroundColor="hotpink"
+   })
+
+   //6 sortcut
+   document.getElementById("light-blue").addEventListener('click', function () {
+    document.body.style.backgroundColor="lightblue"
+   })
+
+    </script>
+    
+</body>
+</html>

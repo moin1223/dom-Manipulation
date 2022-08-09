@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <div id="blog">
+        <h2>Blog</h2>
+        <ul id="blog-list">
+            <li class="border">blog-1</li>
+            <li>blog-2</li>
+            <li>blog-3</li>
+            <li>blog-4</li>
+            <li>blog-5</li>
+        </ul>
+    </div>
+
+    <script>
+        //  creatElementandAppendChild
+        const li = document.createElement("li")
+        li.innerText="blog-6"
+        const ul = document.getElementById("blog-list")
+        ul.appendChild(li)
+
+        // craete a artical
+  const artical = document.createElement("div")
+
+  const h1 = document.createElement("h1")
+   h1.innerText="Artical Title"
+   const p = document.createElement("p")
+  p.innerText = "Falak Tak Song ghbhzabh bhabhabhah"
+  artical.appendChild(h1)
+  artical.appendChild(p)
+
+//   oporer kajta ebabew kora jabe
+
+// artical.innerHTML = 
+// `
+// <h1>Artical Title</h1>
+// <p>Falak Tak Song ghbhzabh bhabhabhah</p>
+// `
+const blog = document.getElementById("blog")
+ console.log(blog)
+ blog.appendChild(artical)
+   //artical.classList.add("blog") //class add kora
+    //
+      
+    
+
+
+    </script>
+    
+</body>
+</html>
