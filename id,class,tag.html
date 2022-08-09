@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+ <div class="box">
+    <h1>I am practicing Dom Id Class Tag</h1>
+ </div>
+ <div class="box" id="second-div">
+    <h1>I am practicing Dom Id Class Tag</h1>
+ </div>
+ <div class="box">
+    <h1>I am practicing Dom Id Class Tag</h1>
+ </div>
+ <div class="box four-div">
+    <h1>I am practicing Dom Id Class Tag</h1>
+ </div>
+    
+    <!-- javascript -->
+    <script>
+    //   tag,id,class
+    let tagCatch = document.getElementsByTagName("Div")
+    let idCatch = document.getElementById("second-div")
+    let classCatch = document.getElementsByClassName("four-div")
+   //  console.log(tagCatch)
+
+    //style,elementchang
+
+   // idCatch.style.backgroundColor="red" 
+   // idCatch.innerText="This Text Contend Are Changed"
+   //idCatch.textContent="This Text Contend Are Changed"
+   //innerHTML
+
+   // class all sibling
+   
+  let allClass = document.getElementsByClassName("box")
+  for(let i=0; i<allClass.length; i++ ){
+   allClass[i].style.backgroundColor="red"
+  }
+   
+
+
+    </script>
+</body>
+</html>
