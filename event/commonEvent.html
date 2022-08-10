@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+   <p id="function-event"></p> 
+    <button onclick="JustFunctionEvent()">Function Event</button>
+    <button id="direct-event">Direct Event</button>
+    <input id="input-text" type="text">
+    <button id="input-button">Get input value and show</button>
+    <script>
+        //Function Event
+        function JustFunctionEvent() {
+            document.getElementById("function-event").innerText="JusFunctionEvent"
+
+        }
+        //Direct Event
+           document.getElementById("direct-event").addEventListener('click',function() {
+            document.getElementById("function-event").innerText="addDirect Event Listener"
+        })
+
+        //Get input value and show
+        document.getElementById("input-button").addEventListener('click',function() {
+           const inpuValue = document.getElementById("input-text")
+           document.getElementById("function-event").innerText=inpuValue.value
+           inpuValue.value = '';
+        })
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>
