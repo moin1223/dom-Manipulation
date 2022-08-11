@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Event deligate</h1>
+    <section id="section-container">
+        <ul id="ul-container">
+            <li class="item">lorem2</li>
+            <li id="second-item" class="item">lorem2</li>
+            <li class="item">lorem2</li>
+            <li class="item">lorem2</li>
+            <li class="item">lorem2</li>
+        </ul>
+        <button id="add-btn">Add li</button>
+    </section>
+    <script>
+        // items pawa
+        
+        const items = document.getElementsByClassName("item")
+        for(const item of items){
+            item.addEventListener('click', function(event) {
+                 document.getElementById("ul-container").removeChild(item)
+                
+            }) 
+            
+        }
+        //  child add
+       document.getElementById("add-btn").addEventListener('click',function() {
+        const li = document.createElement("li")
+          li.innerText="new li added"
+          document.getElementById("ul-container").appendChild(li)  
+       })
+       
+    </script>
+    
+</body>
+</html>

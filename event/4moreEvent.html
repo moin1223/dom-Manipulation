@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>More Event</h1>
+    <section>
+        <h1 id="delete-text">Simple github link delete</h1>
+        <input id="delete-confirme" type="text" placeholder="type delete">
+        <button id="delete-btn" disabled>Delete</button>
+    </section>
+    <script>
+        // focus
+        // document.getElementById("delete-confirme").addEventListener('focus', function() {
+        //     document.body.style.backgroundColor ="red"
+        // })
+        // blur
+        // document.getElementById("delete-confirme").addEventListener('blur', function() {
+        //     document.body.style.backgroundColor ="white"
+        // })
+
+          // keyup enent and Simple github link delete
+          document.getElementById("delete-confirme").addEventListener('keyup', function(event) {
+            if(event.target.value == "delete"){
+                document.getElementById("delete-btn").removeAttribute("disabled")
+
+            }
+            else{
+                document.getElementById("delete-btn").setAttribute('disabled', true)
+            }
+            
+        })
+
+        document.getElementById("delete-btn").addEventListener('click',function() {
+            document.getElementById("delete-text").style.display="none"
+
+        })
+
+
+    </script>
+    
+</body>
+</html>
